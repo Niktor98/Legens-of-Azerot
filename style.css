@@ -63,37 +63,47 @@ main > h2 {
 }
 
 .charakter {
+    --accent: #a98a50;
+    --accent2: #d6b36a;
+    --accent3: #62563f;
+
     background-color: rgba(25, 24, 32, 0.92);
     padding: 30px;
     width: 100%;
 
     border-radius: 12px;
-    border: 1px solid #a98a50;
+    border: 1px solid var(--accent);
 
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
 
     transition: transform 0.3s ease,
-                border-color 0.3s ease;
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
 }
 
 .charakter:hover {
     transform: translateY(-5px);
-    border-color: #e2c27a;
+    border-color: var(--accent2);
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.7),
+        0 0 14px var(--accent);
 }
 
 .charakter img {
     width: 100%;
-    height: 430px;
+    height: 500px;
 
-    object-fit: cover;
+    object-fit: contain;
     object-position: center;
 
     border-radius: 8px;
-    border: 1px solid #62563f;
+    border: 1px solid var(--accent3);
+
+    background-color: transparent;
 }
 
 .charakter h3 {
-    color: #d6b36a;
+    color: var(--accent2);
     font-size: 30px;
     margin-top: 25px;
     margin-bottom: 20px;
@@ -109,7 +119,7 @@ blockquote {
     margin: 25px 5px;
     padding: 20px;
 
-    border-left: 3px solid #d6b36a;
+    border-left: 3px solid var(--accent2);
     background-color: rgba(0, 0, 0, 0.3);
 }
 
@@ -119,12 +129,12 @@ blockquote {
 
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 8px;
-    border: 1px solid rgba(214, 179, 106, 0.3);
+    border: 1px solid #b99a52;
 }
 
 .charakterdaten h4,
 .geschichte h4 {
-    color: #d6b36a;
+    color: var(--accent2);
     font-size: 22px;
     margin-top: 5px;
     margin-bottom: 20px;
@@ -151,6 +161,98 @@ blockquote {
     color: #dedede;
     font-size: 16px;
     line-height: 1.9;
-    text-align: left;
+    text-align: justify;
     margin-bottom: 20px;
+}
+
+.charaktere > .charakter:nth-child(1) {
+    --accent: #a52f3b;
+    --accent2: #82a9d0;
+    --accent3: #527c43;
+
+    background-color: rgba(30, 22, 27, 0.94);
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.7),
+        inset 0 0 25px rgba(165, 47, 59, 0.08);
+}
+
+.charaktere > .charakter:nth-child(1) h3,
+.charaktere > .charakter:nth-child(1) .charakterdaten h4,
+.charaktere > .charakter:nth-child(1) .geschichte h4 {
+    color: #c94a50;
+}
+
+.charaktere > .charakter:nth-child(1) blockquote {
+    border-left-color: #82a9d0;
+}
+
+.charaktere > .charakter:nth-child(2) {
+    --accent: #713c91;
+    --accent2: #9a83bd;
+    --accent3: #25815d;
+
+    background-color: rgba(24, 21, 33, 0.94);
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.7),
+        inset 0 0 25px rgba(113, 60, 145, 0.08);
+}
+
+.charaktere > .charakter:nth-child(2) h3,
+.charaktere > .charakter:nth-child(2) .charakterdaten h4,
+.charaktere > .charakter:nth-child(2) .geschichte h4 {
+    color: #9a83bd;
+}
+
+.charaktere > .charakter:nth-child(2) blockquote {
+    border-left-color: #25815d;
+}
+
+.charaktere > .charakter:nth-child(3) {
+    --accent: #7136a8;
+    --accent2: #d6ae48;
+    --accent3: #397b39;
+
+    background-color: rgba(27, 21, 34, 0.95);
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.7),
+        inset 0 0 25px rgba(113, 54, 168, 0.1);
+}
+
+.charaktere > .charakter:nth-child(3) h3,
+.charaktere > .charakter:nth-child(3) .charakterdaten h4,
+.charaktere > .charakter:nth-child(3) .geschichte h4 {
+    color: #f0d77a;
+}
+
+.charaktere > .charakter:nth-child(3) blockquote {
+    border-left-color: #7136a8;
+}
+
+.charaktere > .charakter:nth-child(4) {
+    --accent: #a6532d;
+    --accent2: #bd945c;
+    --accent3: #85817c;
+
+    background-color: rgba(30, 27, 25, 0.95);
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.7),
+        inset 0 0 25px rgba(166, 83, 45, 0.09);
+}
+
+.charaktere > .charakter:nth-child(4) h3,
+.charaktere > .charakter:nth-child(4) .charakterdaten h4,
+.charaktere > .charakter:nth-child(4) .geschichte h4 {
+    color: #a9683f;
+}
+
+.charaktere > .charakter:nth-child(4) blockquote {
+    border-left-color: #a6532d;
+}
+
+.charaktere > .charakter .charakterdaten {
+    border-color: #b99a52;
 }
